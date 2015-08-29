@@ -3,3 +3,4 @@
 
 - name: restart wildfly
   service: name=wildfly state=restarted
+  when: skip_handlers is not defined or not skip_handlers
